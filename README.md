@@ -1,6 +1,6 @@
 <div align="center">
     <a href="https://github.com/kaangiray26/positron">
-        <img src="https://kaangiray26.github.io/positron/512.png" alt="Earbuds Logo" width="256" height="256">
+        <img src="https://kaangiray26.github.io/positron/favicon.png" alt="Positron Logo" width="256" height="256">
     </a>
     <h1 align="center">positron</h1>
     <p align="center">
