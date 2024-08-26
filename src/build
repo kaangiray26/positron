@@ -4,6 +4,11 @@
 rm -rf .flatpak-builder
 rm -rf build-dir
 
+# Compress the profile
+if [ ! -f profile.tar.gz ]; then
+    tar -czvf profile.tar.gz profile
+fi
+
 # Get the latest firefox build if it doesn't exist
 if [ ! -f firefox.tar.bz2 ]; then
     wget -O firefox.tar.bz2 "https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US"
@@ -24,10 +29,6 @@ if [ ! -f wheels.tar.gz ]; then
     # Remove the container
     docker rm flatpak-wheels
 fi
-
-# Compress the profile
-rm -rf profile.tar.gz
-tar -czvf profile.tar.gz profile
 
 # Remove old flatpak
 flatpak uninstall -y org.flatpak.positron

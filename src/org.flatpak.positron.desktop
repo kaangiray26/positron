@@ -1,0 +1,9 @@
+[Desktop Entry]
+Categories=Development;IDE;
+Comment=Build desktop apps with Python
+Exec=org.flatpak.positron.sh
+Icon=org.flatpak.positron
+Name=Positron
+Terminal=false
+Type=Application
+Version=1.0

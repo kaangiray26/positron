@@ -1,8 +1,16 @@
 #!/bin/sh
 
+# Copy the profile directory to the correct location
+PROFILE_DIR="$HOME/.var/app/org.flatpak.positron/data/profile"
+if [ ! -d "$PROFILE_DIR" ]; then
+    cp -r /app/profile "$PROFILE_DIR"
+fi
+
 # Open firefox to the correct page
 python3 -m hypercorn /app/app:app --bind '127.0.0.1:8080' &
-/app/firefox/firefox --no-remote --new-instance --profile profile http://127.0.0.1:8080
+HYPERCORN_PID=$!
+
+/app/firefox/firefox --no-remote --new-instance --profile "$PROFILE_DIR" --url http://127.0.0.1:8080
 
 # Kill the hypercorn server
-kill $(ps aux | grep '[h]ypercorn' | awk '{print $2}')
+kill $HYPERCORN_PID

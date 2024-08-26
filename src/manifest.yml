@@ -7,7 +7,7 @@ finish-args:
     - --socket=x11
     - --socket=wayland
     - --device=dri
-    - --filesystem=~/.var/app/org.flatpak.positron/data
+    - --filesystem=~/.var/app/org.flatpak.positron/data/
 modules:
     - name: python
       buildsystem: simple
@@ -29,7 +29,7 @@ modules:
           - cp firefox.tar.bz2 /app/
           - tar -xf /app/firefox.tar.bz2 -C /app/
           - rm /app/firefox.tar.bz2
-          # Copy the firefox profile
+          # Copy the profile
           - cp profile.tar.gz /app/
           - tar -xf /app/profile.tar.gz -C /app/
           - rm /app/profile.tar.gz
@@ -41,6 +41,19 @@ modules:
       buildsystem: simple
       build-commands:
           - install -Dm755 ${FLATPAK_ID}.sh -t /app/bin
+          - install -Dm755 ${FLATPAK_ID}.desktop -t /app/share/applications
+          - install -Dm644 favicon.svg /app/share/icons/hicolor/scalable/apps/org.flatpak.positron.svg
+          - install -Dm644 16.png /app/share/icons/hicolor/16x16/apps/org.flatpak.positron.png
+          - install -Dm644 32.png /app/share/icons/hicolor/32x32/apps/org.flatpak.positron.png
+          - install -Dm644 48.png /app/share/icons/hicolor/48x48/apps/org.flatpak.positron.png
+          - install -Dm644 64.png /app/share/icons/hicolor/64x64/apps/org.flatpak.positron.png
+          - install -Dm644 128.png /app/share/icons/hicolor/128x128/apps/org.flatpak.positron.png
+          - install -Dm644 256.png /app/share/icons/hicolor/256x256/apps/org.flatpak.positron.png
+          - install -Dm644 512.png /app/share/icons/hicolor/512x512/apps/org.flatpak.positron.png
       sources:
           - type: file
             path: org.flatpak.positron.sh
+          - type: file
+            path: org.flatpak.positron.desktop
+          - type: dir
+            path: icons

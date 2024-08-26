@@ -4,6 +4,5 @@ wheels
 env
 __pycache__
 firefox.tar.bz2
-profile
 profile.tar.gz
 wheels.tar.gz

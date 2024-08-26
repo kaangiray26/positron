@@ -3,7 +3,6 @@
 from quart import Quart, render_template
 
 app = Quart(__name__)
-app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 @app.route("/")
 async def hello():

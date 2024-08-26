@@ -1,0 +1,28 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+
+#nav-bar {
+    visibility: collapse;
+}
+
+toolbar > .toolbar-items {
+    visibility: hidden;
+}
+
+#toolbar-menubar {
+    visibility: collapse;
+}
+
+.titlebar-spacer[type="pre-tabs"] {
+    width: unset !important;
+}
+
+.titlebar-spacer[type="pre-tabs"]::before {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+    content: "Positron";
+    padding: 0 1rem;
+    z-index: 1;
+}
