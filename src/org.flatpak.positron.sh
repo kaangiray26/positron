@@ -6,10 +6,11 @@ if [ ! -d "$PROFILE_DIR" ]; then
     cp -r /app/profile "$PROFILE_DIR"
 fi
 
-# Open firefox to the correct page
+# Start the hypercorn server
 python3 -m hypercorn /app/app:app --bind '127.0.0.1:8080' &
 HYPERCORN_PID=$!
 
+# Start Firefox
 /app/firefox/firefox --no-remote --new-instance --profile "$PROFILE_DIR" --url http://127.0.0.1:8080
 
 # Kill the hypercorn server
