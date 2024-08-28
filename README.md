@@ -2,7 +2,7 @@
     <a href="https://github.com/kaangiray26/positron">
         <img src="https://kaangiray26.github.io/positron/favicon.png" alt="Positron Logo" width="256" height="256">
     </a>
-    <h1 align="center">positron</h1>
+    <h3 align="center">positron</h3>
     <p align="center">
         Build desktop apps with Python
         <br />
@@ -16,4 +16,9 @@
         ·
         <a href="https://github.com/kaangiray26/positron/issues">Request Feature</a>
     </p>
+</div>
+<hr>
+<div align="center">
+    <h3>Are you ready?</h3>
+    <a href="https://kaangiray26.github.io/positron/installation"><button>Get started</button></a>
 </div>
