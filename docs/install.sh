@@ -17,4 +17,5 @@ rm positron.tar.gz
 # Make the script executable
 chmod +x positron
 
-echo "Positron has been installed.\nRun ./positron to build your project."
+echo "Positron has been installed."
+echo "Run ./positron to build your project."
