@@ -32,5 +32,10 @@ fi
 
 # Remove old flatpak
 flatpak uninstall -y org.flatpak.positron
+
 flatpak-builder --force-clean --install --user build-dir manifest.yml
-flatpak run org.flatpak.positron
+if [ $? -eq 0 ]; then
+    flatpak run org.flatpak.positron
+else
+    echo "Build failed."
+fi

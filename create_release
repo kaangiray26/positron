@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# Remove old release
+rm -f positron.tar.gz
+
+# Build the release
+mkdir release
+cp -r src/icons release/
+cp -r src/profile release/
+cp -r src/static release/
+cp -r src/templates release/
+cp src/app.py release/
+cp src/Dockerfile release/
+cp src/manifest.yml release/
+cp src/org.flatpak.positron.desktop release/
+cp src/org.flatpak.positron.sh release/
+cp src/positron release/
+cp src/requirements.txt release/
+
+# Remove the directory
+cd release
+tar -czf positron.tar.gz *
+cd ..
+mv release/positron.tar.gz .
+rm -rf release
+
+# Done
+echo "Done!"
+echo "Now you can upload positron.tar.gz to GitHub Releases."
+echo "Simply create a new release with the following command:"
+echo "gh release create vX.Y positron.tar.gz"
+echo "Replace vX.Y with the version number."

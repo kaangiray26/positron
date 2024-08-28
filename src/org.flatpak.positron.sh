@@ -9,6 +9,7 @@ fi
 # Start the hypercorn server
 python3 -m hypercorn /app/app:app --bind '127.0.0.1:8080' &
 HYPERCORN_PID=$!
+echo "Hypercorn PID: $HYPERCORN_PID"
 
 # Start Firefox
 /app/firefox/firefox --no-remote --new-instance --profile "$PROFILE_DIR" --url http://127.0.0.1:8080
