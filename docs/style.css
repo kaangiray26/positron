@@ -136,6 +136,16 @@ button:hover {
     text-align: center;
 }
 
+.installation-section > a {
+    margin-left: auto;
+}
+
+.installation-section > p {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
 .os-overview {
     display: flex;
     flex-wrap: wrap;
@@ -155,7 +165,8 @@ button:hover {
     position: relative;
 }
 
-.os:hover {
+.os:hover,
+.os:active {
     cursor: pointer;
     border-radius: 0.375rem;
     background-color: #f5f5f5;
@@ -179,10 +190,4 @@ button:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-.installation-section > p {
-    text-align: center;
-    font-size: 1.25rem;
-    font-weight: 500;
 }
