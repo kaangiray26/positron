@@ -9,6 +9,7 @@
         <meta name="description" content="Build desktop apps with Python" />
         <link rel="stylesheet" href="./style.css" />
         <link rel="shortcut icon" type="image/svg+xml" href="./favicon.svg" />
+        <script src="tutorial.js"></script>
     </head>
     <body>
         <header>
@@ -17,20 +18,138 @@
                 <h1>Positron</h1>
             </a>
         </header>
-        <main>
-            <section>
-                <h2>Tutorial</h2>
-                <p>
-                    This tutorial will guide you through building your first
-                    desktop application with Positron.
-                </p>
-                <h2>What are we building?</h2>
-                <p>
-                    We are going to create a simple <b>image dithering app</b>
-                    that converts an image to a dithered version for a retro
-                    look and smaller file size.
-                </p>
-            </section>
-        </main>
+        <div class="tutorial">
+            <aside>
+                <ul>
+                    <li>
+                        <a href="#tutorial">Tutorial</a>
+                    </li>
+                    <li>
+                        <a href="#directory-structure">Directory Structure</a>
+                    </li>
+                </ul>
+            </aside>
+            <main>
+                <section>
+                    <h2>Tutorial</h2>
+                    <p>
+                        This tutorial will guide you through building your first
+                        desktop application with Positron.
+                    </p>
+                    <h2>Directory Structure</h2>
+                    <p>
+                        After you run the Positron installation script, you'll
+                        find (hopefully) some files and directories in your
+                        project folder. I know this is boring, but we have to go
+                        through all of them:
+                    </p>
+                    <ul>
+                        <li>
+                            <code>icons/</code>
+                            <p>
+                                This is where you can put your icons in
+                                different sizes to be used as the Flatpak
+                                application icon.
+                            </p>
+                        </li>
+                        <li>
+                            <code>profile/</code>
+                            <p>
+                                This one is a Firefox profile, configured to
+                                make your application look like a desktop
+                                application. You can customize it using CSS as
+                                you wish.
+                            </p>
+                        </li>
+                        <li>
+                            <code>static/</code>
+                            <p>
+                                Quart serves static files from this folder. You
+                                can put everything here, even your Python
+                                scripts if that makes sense for you.
+                            </p>
+                        </li>
+                        <li>
+                            <code>templates/</code>
+                            <p>
+                                This is where you can put your HTML templates.
+                                Jinja2 is used to render them, so you can use
+                                all its features.
+                            </p>
+                        </li>
+                        <li>
+                            <code>app.py</code>
+                            <p>
+                                This is the main Python script that the web
+                                server runs. You can put your main logic and
+                                routes here.
+                            </p>
+                        </li>
+                        <li>
+                            <code>Dockerfile</code>
+                            <p>
+                                This is a Dockerfile that gathers necessary
+                                dependencies with the correct Python version
+                                that is supported by the
+                                org.freedesktop.Platform runtime on Flatpak. It
+                                builds a wheel package and creates an archive
+                                that can be used in the build process.
+                            </p>
+                        </li>
+                        <li>
+                            <code>manifes.yml</code>
+                            <p>
+                                This is the manifest file that Flatpak-builder
+                                uses to build the application. You can customize
+                                it as you wish.
+                            </p>
+                        </li>
+                        <li>
+                            <code>org.flatpak.positron.desktop</code>
+                            <p>
+                                This is the desktop file that Flatpak uses to
+                                create the application shortcut. You can
+                                customize it as you wish.
+                            </p>
+                        </li>
+                        <li>
+                            <code>org.flatpak.positron.sh</code>
+                            <p>
+                                This is the script that Flatpak uses to run the
+                                application. You can customize it as you wish.
+                            </p>
+                        </li>
+                        <li>
+                            <code>positron</code>
+                            <p>
+                                This comes from the installation script and is
+                                just a simple helper script to automate the
+                                building and running process.
+                            </p>
+                        </li>
+                        <li>
+                            <code>requirements.txt</code>
+                            <p>
+                                This is where you can put your Python
+                                dependencies. The installation script will
+                                install them for you.
+                            </p>
+                        </li>
+                    </ul>
+                </section>
+                <footer>
+                    <p>
+                        This work is licensed under the
+                        <a href="https://github.com/kaangiray26/positron"
+                            >MIT License</a
+                        >
+                    </p>
+                    <p>
+                        Copyright © 2024 by
+                        <a href="https://www.buzl.uk/">kaangiray26</a>
+                    </p>
+                </footer>
+            </main>
+        </div>
     </body>
 </html>

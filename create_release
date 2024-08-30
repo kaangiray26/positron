@@ -1,10 +1,24 @@
 #!/bin/sh
 
+# Create release folder
+mkdir release
+
 # Remove old release
 rm -f positron.tar.gz
 
-# Build the release
-mkdir release
+# Create wheels for the dependencies
+# Target version is Python 3.11.9
+# This is the version used by org.freedesktop.Platform 23.08
+cd src
+rm -rf wheels
+docker build -t flatpak-wheels . --no-cache
+docker run --name flatpak-wheels flatpak-wheels
+docker cp flatpak-wheels:/app/wheels.tar.gz wheels.tar.gz
+tar -xzf wheels.tar.gz
+docker rm flatpak-wheels
+cd ..
+
+# Copy files
 cp -r src/icons release/
 cp -r src/profile release/
 cp -r src/static release/
@@ -14,8 +28,9 @@ cp src/Dockerfile release/
 cp src/manifest.yml release/
 cp src/org.flatpak.positron.desktop release/
 cp src/org.flatpak.positron.sh release/
-cp src/positron release/
+cp src/build release/
 cp src/requirements.txt release/
+cp src/wheels.tar.gz release/
 
 # Remove the directory
 cd release
