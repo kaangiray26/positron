@@ -14,8 +14,12 @@ tar -xzf positron.tar.gz
 # Remove the tar archive
 rm positron.tar.gz
 
-# Make the script executable
-chmod +x build
+# Create virtual environment
+python3 -m venv env
 
-echo "Positron has been installed."
-echo "Run ./build to build your projectb
+# Install dependencies
+env/bin/python3 -m pip install --upgrade pip
+env/bin/python3 -m pip install -r requirements.txt
+
+echo "Positron installed successfully!"
+echo "Run 'env/bin/positron --help' to get started."

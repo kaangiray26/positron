@@ -30,9 +30,7 @@ modules:
           - tar -xf /app/firefox.tar.bz2 -C /app/
           - rm /app/firefox.tar.bz2
           # Copy the profile
-          - cp profile.tar.gz /app/
-          - tar -xf /app/profile.tar.gz -C /app/
-          - rm /app/profile.tar.gz
+          - cp -r profile /app/
       sources:
           - type: dir
             path: .

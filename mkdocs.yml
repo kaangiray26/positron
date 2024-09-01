@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+
+site_name: Positron
+site_description: Build desktop apps with Python
+site_url: https://kaangiray26.github.io/positron/
+repo_url: https://github.com/kaangiray26/positron
+
+theme:
+    name: material
+    logo: assets/favicon.png
+    favicon: assets/favicon.svg
+    icon:
+        previous: fontawesome/solid/angle-left
+        next: fontawesome/solid/angle-right
+        repo: fontawesome/brands/github
+    palette:
+        scheme: default
+        primary: custom
+    features:
+        - navigation.instant
+        - navigation.footer
+        - content.code.copy
+
+extra_css:
+    - stylesheets/extra.css
+
+copyright: Copyright &copy 2024 by kaangiray26
+
+markdown_extensions:
+    - def_list
+    - attr_list
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
+
+nav:
+    - "What is Positron?": index.md
+    - "Get Started":
+          - "Introduction": get-started/introduction.md
+          - "Quick Start": get-started/quick-start.md
+    - "Project structure": structure.md
