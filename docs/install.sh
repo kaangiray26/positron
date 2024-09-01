@@ -1,5 +1,6 @@
 #!/bin/sh
 # This script installs Positron on Linux.
+echo "Installing Positron..."
 
 # Get the latest release from GitHub
 # Repo: https://github.com/kaangiray26/positron
