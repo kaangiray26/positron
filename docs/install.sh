@@ -9,7 +9,7 @@ url=$(curl -s https://api.github.com/repos/kaangiray26/positron/releases/latest 
 wget -q -O positron.tar.gz $url
 
 # Open the tar archive
-tar -qxzf positron.tar.gz
+tar -xzf positron.tar.gz
 
 # Remove the tar archive
 rm -f positron.tar.gz
