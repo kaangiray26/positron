@@ -19,3 +19,5 @@ To learn more, read the [user guide](https://kaangiray26.github.io/positron).
 ```
 curl -fsSL https://kaangiray26.github.io/positron/install.sh | sh
 ```
+
+![Screenshot](https://raw.githubusercontent.com/kaangiray26/positron/main/docs/desktop.png)
