@@ -20,5 +20,8 @@
 <hr>
 <div align="center">
     <h3>Install with one command:</h3>
-    <code>curl -fsSL https://kaangiray26.github.io/positron/install.sh | sh</code>
 </div>
+
+```
+curl -fsSL https://kaangiray26.github.io/positron/install.sh | sh
+```
