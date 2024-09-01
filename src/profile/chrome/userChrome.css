@@ -1,28 +1,30 @@
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+/* userChrome.css for Firefox */
 
-
-#nav-bar {
-    visibility: collapse;
+/* Things to hide: */
+#nav-bar,
+#PersonalToolbar,
+#firefox-view-button,
+#alltabs-button,
+.titlebar-spacer,
+#tabbrowser-arrowscrollbox-periphery,
+tab,
+menupopup {
+    visibility: collapse !important;
 }
 
-toolbar > .toolbar-items {
-    visibility: hidden;
+#TabsToolbar {
+    min-height: 44px !important;
 }
 
-#toolbar-menubar {
-    visibility: collapse;
-}
-
-.titlebar-spacer[type="pre-tabs"] {
-    width: unset !important;
-}
-
-.titlebar-spacer[type="pre-tabs"]::before {
-    display: flex;
-    flex: 1 1 auto;
-    justify-content: center;
-    align-items: center;
+#TabsToolbar::after {
     content: "Positron";
-    padding: 0 1rem;
-    z-index: 1;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    height: 44px;
+    width: 100%;
 }
