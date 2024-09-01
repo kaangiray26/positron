@@ -1,4 +1,5 @@
 user_pref("app.normandy.first_run", false);
+user_pref("browser.startup.homepage", "http://127.0.0.1:8000");
 user_pref("app.shield.optoutstudies.enabled", false);
 user_pref("browser.discovery.enabled", false);
 user_pref("browser.download.autohideButton", false);
