@@ -5,6 +5,7 @@ echo "Installing Positron..."
 # Get the latest release from GitHub
 # Repo: https://github.com/kaangiray26/positron
 url=$(curl -s https://api.github.com/repos/kaangiray26/positron/releases/latest | grep "browser_download_url" | cut -d '"' -f 4)
+echo "Downloading from $url"
 
 # Download the release
 wget -q -O positron.tar.gz $url
