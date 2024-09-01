@@ -39,3 +39,5 @@ nav:
           - "Introduction": get-started/introduction.md
           - "Quick Start": get-started/quick-start.md
     - "Project structure": structure.md
+    - "CLI Tool": cli.md
+    - "Resources": resources.md
