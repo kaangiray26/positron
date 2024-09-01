@@ -29,7 +29,6 @@ cp src/Dockerfile release/
 cp src/manifest.yml release/
 cp src/org.flatpak.positron.desktop release/
 cp src/org.flatpak.positron.sh release/
-cp src/build release/
 cp src/requirements.txt release/
 
 # Remove the directory
