@@ -40,4 +40,12 @@ nav:
           - "Quick Start": get-started/quick-start.md
     - "Project structure": structure.md
     - "CLI Tool": cli.md
+    - "Guides":
+          - "Startup functions": guides/startup-functions.md
+          - "Background tasks": guides/background-tasks.md
+          - "Customizing the window": guides/customizing-the-window.md
+          - "Network access": guides/network-access.md
+          - "Wheels": guides/wheels.md
+          - "Routing": guides/routing.md
+          - "Notifications": guides/notifications.md
     - "Resources": resources.md

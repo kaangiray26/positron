@@ -4,9 +4,10 @@ runtime-version: "23.08"
 sdk: org.freedesktop.Sdk
 command: org.flatpak.positron.sh
 finish-args:
-    - --socket=x11
-    - --socket=wayland
+    - --share=ipc
     - --device=dri
+    - --socket=wayland
+    - --socket=fallback-x11
     - --filesystem=~/.var/app/org.flatpak.positron/data/
 modules:
     - name: python

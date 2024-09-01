@@ -1,0 +1,5 @@
+Positron uses [wheels](https://pythonwheels.com/) to install dependencies within the Flatpak building process. As you can see, we run a Docker image to create a wheels folder with all the dependencies. This is because the Python inside the runtime is different from the one in the host system. The `org.freedesktop.Sdk` runtime is based on Python 3.11.9 and to ensure compatibility, we need to use the same version to build the dependencies.
+
+If in the future, the runtime is updated to a newer version of Python, we will need to update the Docker image to use the same version. Simply change the `FROM python:3.11.9-slim` line in the Dockerfile to the new version and rebuild the image. The rest of the process will remain the same.
+
+You may ask, why not just use runtime Python to download and install packages during the build process? The answer is simple, yet makes no sense. With the `buildsystem: simple`, we don't have access to remote resources, so we can't download packages from the internet. This is why we need to use a Docker image to create the wheels folder with all the dependencies.
