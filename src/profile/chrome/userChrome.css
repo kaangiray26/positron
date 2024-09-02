@@ -5,8 +5,12 @@
 #PersonalToolbar,
 #firefox-view-button,
 #alltabs-button,
-.titlebar-spacer,
 #tabbrowser-arrowscrollbox-periphery,
+#toolbar-menubar,
+.titlebar-spacer,
+.devtools-toolbox-bottom-iframe,
+#sidebar-box,
+#sidebar-splitter,
 tab,
 menupopup {
     visibility: collapse !important;

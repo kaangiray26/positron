@@ -4,14 +4,8 @@ user_pref("app.shield.optoutstudies.enabled", false);
 user_pref("browser.discovery.enabled", false);
 user_pref("browser.download.autohideButton", false);
 user_pref("browser.engagement.home-button.has-removed", true);
-user_pref(
-    "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons",
-    false,
-);
-user_pref(
-    "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features",
-    false,
-);
+user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false);
+user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false);
 user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
 user_pref("browser.newtabpage.activity-stream.showSearch", false);
 user_pref("browser.newtabpage.enabled", false);
@@ -38,3 +32,5 @@ user_pref("browser.shell.checkDefaultBrowser", false);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("toolkit.telemetry.reportingpolicy.firstRun", false);
 user_pref("browser.bookmarks.restore_default_bookmarks", false);
+user_pref("toolkit.telemetry.reportingpolicy.firstRun", false);
+user_pref("trailhead.firstrun.didSeeAboutWelcome", true);
