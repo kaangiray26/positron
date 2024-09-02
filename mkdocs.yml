@@ -48,4 +48,5 @@ nav:
           - "Wheels": guides/wheels.md
           - "Routing": guides/routing.md
           - "Notifications": guides/notifications.md
+          - "AUTO_RELOAD": guides/auto-reload.md
     - "Resources": resources.md
