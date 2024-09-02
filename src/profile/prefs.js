@@ -36,3 +36,4 @@ user_pref("toolkit.telemetry.reportingpolicy.firstRun", false);
 user_pref("trailhead.firstrun.didSeeAboutWelcome", true);
 user_pref("browser.laterrun.enabled", false);
 user_pref("layout.spellcheckDefault", 0);
+user_pref("browser.startup.couldRestoreSession.count", -1);
