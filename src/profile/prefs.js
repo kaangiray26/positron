@@ -34,3 +34,5 @@ user_pref("toolkit.telemetry.reportingpolicy.firstRun", false);
 user_pref("browser.bookmarks.restore_default_bookmarks", false);
 user_pref("toolkit.telemetry.reportingpolicy.firstRun", false);
 user_pref("trailhead.firstrun.didSeeAboutWelcome", true);
+user_pref("browser.laterrun.enabled", false);
+user_pref("layout.spellcheckDefault", 0);
