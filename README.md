@@ -21,6 +21,3 @@ curl -fsSL https://kaangiray26.github.io/positron/install.sh | sh
 ```
 
 ![Screenshot](https://raw.githubusercontent.com/kaangiray26/positron/main/docs/desktop.png)
-
-## Examples
-Check out some examples for Positronic apps in [this repository](https://github.com/kaangiray26/positron-examples).
